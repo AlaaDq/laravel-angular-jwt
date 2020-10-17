@@ -3,6 +3,7 @@ import { NgForm } from "@angular/forms";
 
 import { AuthService } from "../../core/auth.service";
 import { IAuth } from 'src/app/shared/interfaces';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -10,8 +11,11 @@ import { IAuth } from 'src/app/shared/interfaces';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
-    constructor(private authService: AuthService) { }
+    return: string = '';
+    constructor(private authService: AuthService,
+                private router: Router,
+                private route: ActivatedRoute
+                ) { }
 
     ngOnInit() {
     }
@@ -23,6 +27,8 @@ export class SigninComponent implements OnInit {
         {console.log(tokenData),
         localStorage.setItem('token',JSON.stringify(tokenData))
         localStorage.setItem('decoded',JSON.stringify(tokenData.decoded))
+        this.return='quotes'
+        this.router.navigateByUrl(this.return);
         },
         error => console.log(error)
         );

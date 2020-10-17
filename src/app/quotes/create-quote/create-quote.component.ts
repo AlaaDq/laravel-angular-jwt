@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { DataService } from '../../core/data.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-quote',
@@ -9,8 +10,11 @@ import { DataService } from '../../core/data.service';
 })
 export class CreateQuoteComponent implements OnInit {
 
-  
-    constructor(private quoteService: DataService) { }
+    return: string = '';
+    constructor(private quoteService: DataService,
+                private router: Router,
+                private route: ActivatedRoute
+                ) { }
   
     ngOnInit() {
     }
@@ -19,9 +23,14 @@ export class CreateQuoteComponent implements OnInit {
         if(form.valid){
             this.quoteService.addQuote(form.value.content)
             .subscribe(
-              () => alert('Quote created!')
+              () => {
+                this.return='quotes'
+                this.router.navigateByUrl(this.return);
+              }
             );
           form.reset();
+        
+
         }
      
     }
