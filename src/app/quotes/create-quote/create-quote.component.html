@@ -1,7 +1,7 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="form-group">
       <label for="content">Content</label>
-      <input type="text" id="content" name="content"  ngModel class="form-control">
+      <input type="text" id="content" name="content" required pattern="^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$"  ngModel class="form-control">
     </div>
     <button class="btn btn-primary" type="submit">Submit</button>
-  </form>
+</form>

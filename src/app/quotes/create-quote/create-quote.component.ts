@@ -16,10 +16,13 @@ export class CreateQuoteComponent implements OnInit {
     }
   
     onSubmit(form: NgForm) {
-      this.quoteService.addQuote(form.value.content)
-        .subscribe(
-          () => alert('Quote created!')
-        );
-      form.reset();
+        if(form.valid){
+            this.quoteService.addQuote(form.value.content)
+            .subscribe(
+              () => alert('Quote created!')
+            );
+          form.reset();
+        }
+     
     }
 }

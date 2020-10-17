@@ -41,13 +41,15 @@ export class QuoteComponent implements OnInit {
   }
 
   onDelete() {
-    this.quoteService.deleteQuote(this.quote.id)
-      .subscribe(
-        () => {
-          this.quoteDeleted.emit(this.quote);
-          console.log('Quote deleted');
-        }
-      );
+    this.quoteDeleted.emit(this.quote);
+    console.log('Quote deleted');
+    // this.quoteService.deleteQuote(this.quote.id)
+    //   .subscribe(
+    //     () => {
+    //       this.quoteDeleted.emit(this.quote);
+    //       console.log('Quote deleted');
+    //     }
+    //   );
   }
 
 }
