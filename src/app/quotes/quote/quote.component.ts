@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {IQuote} from '../../shared/interfaces';
 import {DataService} from '../../core/data.service'
+// import {CommonModule} from '@angular/common';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',

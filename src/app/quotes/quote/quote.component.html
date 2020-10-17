@@ -6,12 +6,13 @@
     <div class="panel-footer">
       <div *ngIf="editing">
         <input type="text" [(ngModel)]="editValue">
-        <a href="#" (click)="onUpdate()">Save</a>
-        <a href="#" (click)="onCancel()">Cancel</a>
+
+        <button (click)="onUpdate()"> Save</button>
+        <button (click)="onCancel()"> Cancel</button>
       </div>
       <div *ngIf="!editing">
-        <a href="#" (click)="onEdit()">Edit</a>
-        <a href="#" (click)="onDelete()">Delete</a>
+        <button (click)="onEdit()"> Edit</button>
+        <button (click)="onDelete()"> Delete</button>
       </div>
     </div>
   </div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from "@angular/forms";
+
+import { AuthService } from "../../core/auth.service";
+import { IAuth } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-signin',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+    constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
-  }
-
+    ngOnInit() {
+    }
+  
+    onSignin(form: NgForm) {
+      this.authService.signin(form.value.email, form.value.password)
+        .subscribe(
+          tokenData => 
+        {console.log(tokenData),
+        localStorage.setItem('token',JSON.stringify(tokenData))
+        localStorage.setItem('decoded',JSON.stringify(tokenData.decoded))
+        },
+        error => console.log(error)
+        );
+    }
 }

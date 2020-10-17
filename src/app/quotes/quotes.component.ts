@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../core/data.service';
-import {IQuote} from '../shared/interfaces';
+import {IQuote,IQuoteresponse} from '../shared/interfaces';
 
 @Component({
   selector: 'app-quotes',
@@ -13,8 +13,8 @@ export class QuotesComponent implements OnInit {
  constructor(private quoteService: DataService) { }
 
   ngOnInit(): void {
-    this.quoteService.getQuotes().subscribe((quotes: IQuote[]) => {
-        this.quotes = quotes;
+    this.quoteService.getQuotes().subscribe((res: IQuoteresponse) => {
+        this.quotes = res.quotes;
       }); 
   }
 

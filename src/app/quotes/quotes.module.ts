@@ -8,10 +8,10 @@ import {QuotesRoutingModule} from './quotes-routing.module';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [QuotesComponent, QuoteComponent, CreateQuoteComponent],
-  imports: [
-    CommonModule,SharedModule,QuotesRoutingModule,FormsModule
-  ],
+    imports: [
+        CommonModule,SharedModule,QuotesRoutingModule,FormsModule
+    ],
+    declarations: [QuotesComponent, CreateQuoteComponent,QuoteComponent],
   exports:[FormsModule]
 })
 export class QuotesModule { }
