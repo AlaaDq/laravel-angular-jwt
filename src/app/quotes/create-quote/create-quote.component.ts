@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm ,NgControl,NgModel} from '@angular/forms';
+
 import { DataService } from '../../core/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class CreateQuoteComponent implements OnInit {
 
-    return: string = '';
+    content:string='';
     constructor(private quoteService: DataService,
                 private router: Router,
                 private route: ActivatedRoute
@@ -19,19 +20,15 @@ export class CreateQuoteComponent implements OnInit {
     ngOnInit() {
     }
   
-    onSubmit(form: NgForm) {
-        if(form.valid){
-            this.quoteService.addQuote(form.value.content)
+    onSubmit(form:NgForm) {
+            if(form.valid)
+            this.quoteService.addQuote(this.content)
             .subscribe(
-              () => {
-                this.return='quotes'
-                this.router.navigateByUrl(this.return);
-              }
-            );
-          form.reset();
-        
-
-        }
-     
+              response => {
+                this.router.navigateByUrl('quotes');
+              },
+              error => console.log(error)
+              
+        );
     }
 }

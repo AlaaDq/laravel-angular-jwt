@@ -11,6 +11,8 @@ import { SharedModule } from './shared/shared.module';
 import { QuotesModule } from './quotes/quotes.module';
 import { AuthModule } from './auth/auth.module';
 
+import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +27,8 @@ import { AuthModule } from './auth/auth.module';
     SharedModule,
     QuotesModule,
     AuthModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

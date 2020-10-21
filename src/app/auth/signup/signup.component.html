@@ -11,5 +11,9 @@
       <label for="password">Password</label>
       <input type="password" id="password" name="password" ngModel class="form-control" required>
     </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password_confirmation" name="password_confirmation" ngModel class="form-control" required>
+    </div>
     <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Sign up</button>
   </form>
