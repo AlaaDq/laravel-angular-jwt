@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from "@angular/forms";
 import { AuthService } from 'src/app/core/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -34,13 +33,14 @@ export class SignupComponent implements OnInit {
   get name()  {
     return this.registrationForm.get('name');
   }
-
   get email()  {
     return this.registrationForm.get('email');
   }
   get password()  {
     return this.registrationForm.get('password');
   }
+
+
   get f(){
     return this.registrationForm.value;
   }

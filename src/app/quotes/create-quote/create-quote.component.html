@@ -4,7 +4,6 @@
     <div class="form-group">
       <label >Content</label>
       <input [(ngModel)]="content"  #ctrl="ngModel" name="content"  [class.is-invalid]="ctrl.invalid && ctrl.touched"  required class="form-control" id="content">
-      <p> You entered {{content}}</p>
       <small class="text-danger" [class.d-none]="ctrl.valid || ctrl.untouched">Name is required</small>
     </div>
     <button class="btn btn-primary" type="submit" [disabled]="f.form.invalid">Submit</button>
