@@ -17,9 +17,9 @@ export class AuthService {
 
     
     
-  signup(username: string, email: string, password: string) {
+  signup(username: string, email: string, password: string,password_confirmation:string) {
     return this.http.post(this.baseUrl + 'user/signup',
-      {name: username, email: email, password:password},
+      {name: username, email: email, password:password,password_confirmation:password_confirmation},
       {headers: new HttpHeaders({'X-Requested-With': 'XMLHttpRequest'})});
   }
 
