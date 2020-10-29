@@ -13,12 +13,14 @@ import { AuthModule } from './auth/auth.module';
 
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CoreModule,
     SharedModule,
     QuotesModule,
-    AuthModule,
+    AuthModule,//last module has notfound route
     ReactiveFormsModule,
     FormsModule
   ],

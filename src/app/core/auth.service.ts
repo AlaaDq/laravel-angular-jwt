@@ -12,7 +12,7 @@ import {  IToken,IAuth} from '../../app/shared/interfaces';
 
 export class AuthService {
     baseUrl: string = 'http://localhost:8000/api/';
-
+    authStatus:boolean=false;
     constructor(private http: HttpClient) { }
 
     
@@ -24,6 +24,7 @@ export class AuthService {
   }
 
   signin(email: string, password: string):Observable<IAuth> {
+    
     return this.http.post<IToken>(this.baseUrl + 'user/signin',
       {email: email, password: password},
       {headers: new HttpHeaders({'X-Requested-With': 'XMLHttpRequest'})})
@@ -35,11 +36,17 @@ export class AuthService {
     }))
  
     
+    
   }
 
+ 
   getToken() {
     const s= localStorage.getItem('token');
     const ob=JSON.parse(s);
-    return ob.token;
+    return ob!=null ? ob.token:null;
+  }
+
+  isAuth(){
+    return this.getToken()!=null? true:false;
   }
 }

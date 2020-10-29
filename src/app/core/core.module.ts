@@ -9,6 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,HttpClientModule
   ],
-  providers:[DataService,AuthService]
+//   providers:[DataService,AuthService]  becuse it already provided in root level it still work
 })
 export class CoreModule { }

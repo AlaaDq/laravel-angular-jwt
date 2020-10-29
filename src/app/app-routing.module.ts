@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/quotes'},
-    // { path: '**', pathMatch: 'full', redirectTo: '/quotes' }
 ];
 
 @NgModule({
