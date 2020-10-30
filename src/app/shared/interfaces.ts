@@ -1,4 +1,7 @@
 // export interface Interfaces {
+
+import { Observable } from 'rxjs';
+
 // }
 export interface IQuote {
     content: string;
@@ -22,4 +25,6 @@ export interface IQuoteresponse {
     decoded:JSON;
   }
 
-    
+    export interface ICanComponentDeactivate{
+        canDeactivate:()=> Observable<boolean>|Promise<boolean>|boolean;
+    }
