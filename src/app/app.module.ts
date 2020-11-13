@@ -17,7 +17,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { HttpClient } from '@angular/common/http';
             }
             
         }
-    )
+    ),
+    BrowserAnimationsModule,
+    MatSnackBarModule
     
 
   ],

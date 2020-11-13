@@ -10,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
+
 export class SigninComponent implements OnInit {
     return: string = '';
     form: FormGroup;

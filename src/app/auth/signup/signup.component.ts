@@ -20,7 +20,6 @@ export class SignupComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-
         this.registrationForm = this.fb.group({
           name: ['', [Validators.required, Validators.minLength(3)]],
           password: ['',[Validators.required, Validators.minLength(6)]],
@@ -29,6 +28,7 @@ export class SignupComponent implements OnInit {
         }, { validator: PasswordValidator });
   }
 
+  //for using in template in shortcut way with validations
   get name()  {
     return this.registrationForm.get('name');
   }
