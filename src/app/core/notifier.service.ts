@@ -11,7 +11,7 @@ export class NotifierService {
   showNotification(message:string,btntext:string,status:'success'|'error'){
       //we can use openfromcomponent to custoize the template of notification but then we will need calling dismiss func on button
       this.snackBar.open(message,btntext,{
-          duration:3500,
+          duration:4000,
           horizontalPosition:"right",
           verticalPosition:"top",
           panelClass:status,// defined in glabal style

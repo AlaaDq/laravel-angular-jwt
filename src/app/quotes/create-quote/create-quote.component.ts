@@ -40,9 +40,8 @@ export class CreateQuoteComponent implements OnInit, ICanComponentDeactivate {
             this.quoteService.addQuote(this.content)
                 .subscribe(
                     response => {
-                        this._content = '';
                         this.editSaved = true;
-
+                        form.reset();
                         // this.router.navigateByUrl('quotes');
                         this.notifierService.showNotification('quotes added successfully !', 'dismiss', 'success')
                     },
