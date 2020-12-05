@@ -14,35 +14,37 @@ import { IQuote,IQuoteresponse } from '../../app/shared/interfaces';
 export class DataService {
    
     baseUrl: string = 'http://localhost:8000/api/';
-
     constructor(private http: HttpClient, private authService: AuthService) { }
 
     
 addQuote(content: string) {
     const body = JSON.stringify({content: content});
-    const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.post( this.baseUrl + 'quote?token=' + this.authService.getToken(), body, {headers: headers})
+    const headers = new HttpHeaders({'Content-Type': 'application/json','Authorization':  "Bearer " + this.authService.getToken() });
+    return this.http.post( this.baseUrl + 'quote', body, {headers: headers})
   }
 
   getQuotes(): Observable<IQuoteresponse> {
-    return this.http.get<IQuoteresponse>( this.baseUrl + 'quotes?token='+this.authService.getToken())
+      const headers = new HttpHeaders({'Authorization':  "Bearer " + this.authService.getToken() });
+      return this.http.get<IQuoteresponse>( this.baseUrl + 'quotes',{headers: headers})
+      .pipe(
+          catchError(this.handleError)
+      );
+
+    // return this.http.get<IQuoteresponse>( this.baseUrl + 'quotes?token='+this.authService.getToken())
     // .pipe(map(quotes => {          
     //      return quotes.filter((cust: IQuote) => cust.id === 1);
     // }))
-    .pipe(
-        catchError(this.handleError)
-    );
   }
 
   updateQuote(id: number, newContent: string) {
     const body = JSON.stringify({content: newContent});
-    const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.http.put<IQuote>( this.baseUrl + 'quote/' + id + '?token=' + this.authService.getToken(), body, {headers: headers})
- 
+    const headers = new HttpHeaders({'Content-Type': 'application/json','Authorization':  "Bearer " + this.authService.getToken() });
+    return this.http.put<IQuote>( this.baseUrl + 'quote/' + id, body, {headers: headers})
   }
 
   deleteQuote(id: number) {
-    return this.http.delete( this.baseUrl + 'quote/' + id + '?token=' + this.authService.getToken());
+    const headers = new HttpHeaders({'Authorization':  "Bearer " + this.authService.getToken() });
+    return this.http.delete( this.baseUrl + 'quote/' + id ,{headers: headers});
   }
 
 
@@ -53,7 +55,7 @@ addQuote(content: string) {
         const errMessage = error.error.message;
         return Observable.throw(errMessage);
     }
-    return Observable.throw(error || 'Node.js server error');
+    return Observable.throw(error || 'server error');
   }
 
 }

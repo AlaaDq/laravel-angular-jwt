@@ -1,0 +1,402 @@
+
+    <header>
+      <nav>
+        <div class="logo"></div>
+        
+        <ul>
+          <li>
+            <a  href="#"> {{'nav.home' | translate}}
+            </a>
+          </li>
+          <li>
+            <a  href="#">{{'nav.about' | translate}}</a>
+          </li>
+          <li>
+            <a  href="#">{{'nav.services' | translate}}</a>
+          </li>
+          <li>
+            <a  href="#">{{'nav.categories' | translate}}</a>
+          </li>
+          <li>
+            <a  href="#">{{'nav.pages' | translate}}</a>
+          </li>
+          <li>
+            <a  routerLink="/quotes">{{'nav.blogs' | translate}}</a>
+          </li>
+          <li>
+            <a  href="#">{{'nav.contacts' | translate}}</a>
+          </li>
+          <li>
+            <a  href="#">
+                <select (click)="changeLang($event.target.value)">
+                    <option *ngFor="let lang of supportedLangs">
+                        {{lang}}
+                    </option>
+                </select>
+            </a>
+          </li>
+        </ul>
+        <!-- use  font awsome instead -->
+        <i class="fa fa-search"></i>
+        <i class="fa fa-shopping-cart"><span class="count"></span></i>
+    </nav>
+    <div class="header-intro">
+        <div class="header-intro-left">
+            <h1 class="header--title">
+                {{'header.fp-title' | translate}}<span> {{'header.sp-title' | translate}}</span> <br> <span>{{'header.tp-title' | translate}}</span>  {{'header.lp-title' | translate}}
+            </h1>
+            <p class="header--paragraph">
+                {{'header.paragraph' | translate}}
+            </p>
+            <div class="rowb">
+                <button class="header--btn-1">{{'header.btn-1' | translate}}</button><input type="text" placeholder="enter food name"><button class="header--btn-2">  {{'header.btn-2' | translate}}</button>
+            </div>
+        </div>
+        <div class="header-intro-right">
+            <div class="delivery-man"></div>
+        </div>
+    </div>
+    </header>
+    <main>
+      <section class="featured-categories" >
+        <h2 class="featured-categories--title">Featured Categories</h2>
+        <p class="featured-categories--paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cumque ad explicabo debitis ipsam dolorum neque qui ab rem? At eaque maxime iure possimus dolorum. Pariatur neque voluptatibus accusantium tempora? </p>
+        <div class="cat-list">
+            <div class="cat-item">
+                <div class="label">
+                    <h3>Fast Food</h3>
+                    <img src="./assets/2/Group 26.jpg" alt="">
+                </div>
+            </div>
+            <div class="cat-item">
+                <div class="label">
+                    <h3>Fast Food</h3>
+                    <img src="./assets/2/Group 23.jpg" alt="">
+                </div>
+            </div>
+            <div class="cat-item">
+                <div class="label">
+                    <h3>Fast Food</h3>
+                    <img src="./assets/2/Group 26.jpg" alt="">
+                </div>
+            </div> 
+        </div>
+      </section>
+      <section class="services" >
+        <h2 class="services--title">Our Services</h2>
+        <p class="services--paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cumque ad explicabo debitis ipsam dolorum neque qui ab rem? At eaque maxime iure possimus dolorum. Pariatur neque voluptatibus accusantium tempora? </p>
+        <div class="cat-list">
+            <div class="cat-item">
+                <div class="white-padding">
+                    <img src="./assets/2/services1.jpg" alt="">
+                </div>
+                <h3>Fast Food</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro vero exercitationem, eligendi eveniet esse, sint sit tenetur consequuntur enim labore architecto optio ab dolorum, modi repudiandae repellat ad quo?</p>
+ 
+            </div>
+            <div class="cat-item">
+                <div class="white-padding">
+                    <img src="./assets/2/services2.jpg" alt="">
+                </div>
+                <h3>Fast Food</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro vero exercitationem, eligendi eveniet esse, sint sit tenetur consequuntur enim labore architecto optio ab dolorum, modi repudiandae repellat ad quo?</p>
+            </div>
+            <div class="cat-item">
+                <div class="white-padding">
+                    <img src="./assets/2/services3(2).jpg" alt="">
+                </div>
+                <h3>Fast Food</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat porro vero exercitationem, eligendi eveniet esse, sint sit tenetur consequuntur enim labore architecto optio ab dolorum, modi repudiandae repellat ad quo?</p>
+            </div> 
+        </div>
+      </section>
+      <section class="recipes" >
+        <h2 class="recipes--title">Recipes</h2>
+        <p class="recipes--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, in quae ratione quas esse placeat minus perspiciatis molestias facilis nisi dignissimos aspernatur cupiditate doloribus rem quaerat aut doloremque enim laboriosam.</p>
+        <nav class="recipes--nav">
+            <ul class="recipes--nav--list">
+                <li class="recipes--nav--list--item">All</li>
+                <li class="recipes--nav--list--item">Salad</li>
+                <li class="recipes--nav--list--item">Fast Food</li>
+                <li class="recipes--nav--list--item">Platters</li>
+                <li class="recipes--nav--list--item">Dessert</li>
+            </ul>
+        </nav>
+        <div class="recipes-list">
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/2.jpg" alt="">
+             <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/4(2).jpg" alt="">
+             <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/5(2).jpg" alt="">
+            <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/8(2).jpg" alt="">
+             <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+        </div>
+
+        <div class="recipes-list">
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/jonathan-borba-d9KHXXjJR54-unsplash.jpg" alt="">
+             <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/jonathan-borba-fIGQshb_Bh0-unsplash.jpg" alt="">
+             <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/jonathan-borba-Kosh4ZkWqas-unsplash.jpg" alt="">
+            <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+            <div class="recipes-list-card">
+            <img class="recipes-list-card-img" src="./assets/3/leo-roza-WhPrQKb3Tjs-unsplash.jpg" alt="">
+            <div class="recipes-list-card-details">
+                 <div class="rowb">
+                     <h3>left</h3><span>$40</span>
+                 </div>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                 <div class="rating">         
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="./assets/3/star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/weak-star.jpg" alt="">
+                     <img src="assets/3/Group 52.jpg" alt="">
+                </div>
+             </div>   
+            </div>
+        </div>
+      </section>
+      <section class="about-us" >
+        <div class="about-us-left">
+            <div class="background"></div>
+        </div>
+        <div class="about-us-right">
+            <h2 class="about-us--title">What People Say About Us</h2>
+            <p class="about-us--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, in quae ratione quas esse placeat minus perspiciatis molestias facilis nisi dignissimos aspernatur cupiditate doloribus rem quaerat aut doloremque enim laboriosam.</p>
+            <div class="rowb">
+                <img src="./assets/4/3.jpg" alt="">
+                <img src="./assets/4/01-150x150.jpg" alt="">
+                <img src="./assets/4/03-150x150.jpg" alt="">
+            </div>
+            <h3 class="text-center">Alaa Dq</h3>
+            <p style="text-align: center;margin-top: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit asperiores quis id eligendi quisquam fugiat officiis libero vero. Delectus tenetur dolorem deleniti error nobis! Esse neque eligendi at nulla commodi.</p>
+            <div class="arrowb">
+                <div class="right-arrowb"></div>
+                <div class="left-arrowb"></div>
+            </div>
+        </div>
+      </section>
+      <section class="our-chefs" >
+        <h2 class="our-chefs--title">Our Chefs</h2>
+        <p class="our-chefs--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, in quae ratione quas esse placeat minus perspiciatis molestias facilis nisi dignissimos aspernatur cupiditate doloribus rem quaerat aut doloremque enim laboriosam.</p>
+
+        <div class="chefs-list">
+            <div class="chefs-list-card">
+                <div class="chefs-list-card-img">
+                    <h2 class="chef-name">alaaaaaa ald</h2>
+                </div>
+        </div>
+        <div class="chefs-list-card">
+            <div class="chefs-list-card-img">
+                <h2 class="chef-name">alaaaaaa ald</h2>
+            </div>
+        </div>
+        <div class="chefs-list-card">
+            <div class="chefs-list-card-img">
+                <h2 class="chef-name">alaaaaaa ald</h2>
+            </div>
+        </div>
+        <div class="chefs-list-card">
+            <div class="chefs-list-card-img">
+                <h2 class="chef-name">alaaaaaa ald</h2>
+            </div>
+            </div>
+        </div>
+      </section>
+      <section class="latest-blogs">
+        <h2 class="latest-blogs--title">Our Latest Blogs & News</h2>
+        <p class="latest-blogs--paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, in quae ratione quas esse placeat minus perspiciatis molestias facilis nisi dignissimos aspernatur cupiditate doloribus rem quaerat aut doloremque enim laboriosam.</p>
+        <div class="blog-cards-list">
+            <div class="blog">
+                <div class="blog--header">
+                    <h3 class="blog-date">asdcasdc</h3>
+                </div>
+                <div class="blog--footer">
+                    <h2 class="blog-title">adcasdcadc afdav adf </h2>
+                    <p class="blog-brief">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia asperiores eum expedita nemo fuga deserunt itaque quaerat cupiditate, mollitia voluptas ipsam perspiciatis in reprehenderit harum officia amet modi, veniam architecto!</p>
+                    <button class="blog-btn">afdadf</button>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="blog--header">
+                    <h3 class="blog-date">asdcasdc</h3>
+                </div>
+                <div class="blog--footer">
+                    <h2 class="blog-title">adcasdcadc afdav adf </h2>
+                    <p class="blog-brief">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia asperiores eum expedita nemo fuga deserunt itaque quaerat cupiditate, mollitia voluptas ipsam perspiciatis in reprehenderit harum officia amet modi, veniam architecto!</p>
+                    <button class="blog-btn">afdadf</button>
+                </div>
+            </div>
+            <div class="blog">
+                <div class="blog--header">
+                    <h3 class="blog-date">asdcasdc</h3>
+                </div>
+                <div class="blog--footer">
+                    <h2 class="blog-title">adcasdcadc afdav adf </h2>
+                    <p class="blog-brief">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia asperiores eum expedita nemo fuga deserunt itaque quaerat cupiditate, mollitia voluptas ipsam perspiciatis in reprehenderit harum officia amet modi, veniam architecto!</p>
+                    <button class="blog-btn">afdadf</button>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+       <div class="footer-rowb">
+        <div class="footer-col">
+            <img src="./assets/5+1/Flat.jpg" alt=""> 
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores repellendus facilis ex animi id quia exercitationem. Ratione, neque maiores impedit dolorem, magnam quibusdam excepturi corrupti incidunt voluptatibus, nisi dicta obcaecati.</p>  
+            <div class="subscripe">
+                <input type="email" placeholder="your eamil" class="email">
+                <button class="btn">send</button>
+            </div>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Services</h3>
+            <ul>
+                <li>About</li>
+                <li>Support</li>
+                <li>Chats</li>
+                <li>Blogs</li>
+                <li>Privacy & Policy</li>
+            </ul>
+        </div> 
+        <div class="footer-col">
+            <h3>Quick links</h3>
+            <ul>
+                <li>Food Collections</li>
+                <li>Services</li>
+                <li>Online Order</li>
+                <li>Contacts</li>
+                <li>Blogs</li>
+            </ul>
+        </div> 
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i style="margin-right: 2px;" class="fa fa-phone"></i> +5977 5777 1427</li>
+                <li><i style="margin-right: 4px;" class="fa fa-envelope-o"></i>alaa.97@gmial.com</li>
+                <li><i style="margin-right: 4px;" class="fa fa-map-marker"></i> Damascus Syria</li>
+            </ul>
+        </div> 
+        <div class="footer-col">
+            <h3>aaaa</h3>
+            <div class="social">
+                <ul>
+                    <i class="fa fa-facebook-f"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                </ul>
+            </div>
+        </div> 
+       </div> 
+    </footer>

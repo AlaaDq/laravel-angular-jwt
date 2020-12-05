@@ -1,5 +1,23 @@
 {
     "home":{
         "title":"blablablalb in france"
+    },
+    "nav":{
+        "home":"Home",
+        "about":"about",
+        "services":"services",
+        "categories":"categories",
+        "pages":"pages",
+        "blogs":"blogs",
+        "contacts":"contacts"
+    },
+    "header":{
+        "fp-title":"Free Home",
+        "sp-title":"Delivery",
+        "tp-title":"Within",
+        "lp-title":"An Hour",
+        "paragraph":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Error impedit optio, quasi corporis at laborum architecto quisquam! Consequuntur modi esse aliquid iure officia sunt nulla maiores eius mollitia, et vitae",
+        "btn-1":"Order Now",
+        "btn-2":"Search"
     }
 }

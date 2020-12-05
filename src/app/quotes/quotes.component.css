@@ -1,1 +1,6 @@
 a{margin-left:20px;}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

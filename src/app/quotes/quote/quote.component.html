@@ -1,19 +1,18 @@
   
-<div class="panel panel-default">
-    <div class="panel-body">
+<div class="Quote">
+    <div class="Quote-body">
       {{ quote.content }}
     </div>
-    <div class="panel-footer">
+    <div class="Quote-footer">
+        <input *ngIf="editing" type="text" [(ngModel)]="editValue">
       <div *ngIf="editing">
-        <input type="text" [(ngModel)]="editValue">
-
-        <button (click)="onUpdate()"> Save</button>
-        <button (click)="onCancel()"> Cancel</button>
-      </div>
-      <div *ngIf="!editing">
-        <button (click)="onEdit()"> Edit</button>
-        <button (click)="onDelete()"> Delete</button>
+        <button class="btn" (click)="onUpdate()"> Save</button>
+        <button class="btn" (click)="onCancel()"> Cancel</button>
       </div>
     </div>
+    <div *ngIf="!editing">
+        <button class="btn" (click)="onEdit()"> Edit</button>
+        <button class="btn" (click)="onDelete()"> Delete</button>
+      </div>
   </div>
   

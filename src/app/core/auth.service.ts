@@ -1,21 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders  } from '@angular/common/http';
 
-import { Observable } from 'rxjs';
 import { map, catchError,retry,tap } from 'rxjs/operators';
 
 import {  IToken,IAuth} from '../../app/shared/interfaces';
+
+
+import { BehaviorSubject, Observable } from 'rxjs';
+
+
+export interface IAuthService {
+    readonly authStatus$: BehaviorSubject<boolean>
+    signup(username: string, email: string, password: string,password_confirmation:string) 
+    signin(email: string, password: string):Observable<IAuth> 
+    updateAuthStatus(state: boolean): void
+  }
+
+  export const defaultAuthState: boolean = false;
+
 
 @Injectable({
   providedIn: 'root'
 })
 
+
+
+
 export class AuthService {
     baseUrl: string = 'http://localhost:8000/api/';
-    authStatus:boolean=false;
+    readonly authStatus$ = new BehaviorSubject<boolean>(defaultAuthState);
+
     constructor(private http: HttpClient) { }
 
-    
+    public updateAuthStatus(state: boolean): void  {
+          this.authStatus$.next(state)
+          console.log("authstatus$"+state)
+    }
+
     
   signup(username: string, email: string, password: string,password_confirmation:string) {
     return this.http.post(this.baseUrl + 'user/signup',
@@ -28,14 +49,18 @@ export class AuthService {
     return this.http.post<IToken>(this.baseUrl + 'user/signin',
       {email: email, password: password},
       {headers: new HttpHeaders({'X-Requested-With': 'XMLHttpRequest'})})
-    .pipe(map((response:IToken)=>{
+    .pipe(
+    tap((response:IToken)=>{let currentState= response.token ? true:false;this.updateAuthStatus(currentState);}),
+
+    map((response:IToken)=>{
         const token = response.token;
         const base64Url = token.split('.')[1];
         const base64 = base64Url.replace('-', '+').replace('_', '/');
         return {token: token, decoded: JSON.parse(window.atob(base64))};
-    }))
- 
+    }
+    )
     
+    )
     
   }
 
@@ -49,4 +74,5 @@ export class AuthService {
   isAuth(){
     return this.getToken()!=null? true:false;
   }
+
 }

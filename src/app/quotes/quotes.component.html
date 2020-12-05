@@ -1,3 +1,8 @@
-<a routerLink="/create-quote" >create quote</a>
+<a  [routerLink]="['/create-quote']"
+>create quote</a>
+
 <br>
-<app-quote *ngFor="let quote of quotes" [quote]="quote" (quoteDeleted)="onDeleted($event)"></app-quote>
+<div>
+    <app-quote *ngFor="let quote of quotes" [quote]="quote" (quoteDeleted)="onDeleted($event)"></app-quote>
+    
+</div>

@@ -1,3 +1,32 @@
-.panel{
-    margin: 20px;
+.Quote{
+    background-color: cornflowerblue;
+    padding: 20px;
+    margin: 25px 10px;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 170px;
+}
+
+.Quote-body{
+
+}
+.Quote-footer{
+
+}
+input{
+    border: none;
+    background-color: cornsilk;
+    padding: 10px 20px;
+    margin: 10px;
+}
+.btn{
+    border: none;
+    background-color: cornsilk;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 5px  10px;
 }

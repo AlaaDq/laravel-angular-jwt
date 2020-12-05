@@ -1,5 +1,14 @@
 {
     "home":{
         "title":"blablablalb"
+    },
+    "nav":{
+        "home":"Home",
+        "about":"about",
+        "services":"services",
+        "categories":"categories",
+        "pages":"pages",
+        "blogs":"blogs",
+        "contacts":"contacts"
     }
 }

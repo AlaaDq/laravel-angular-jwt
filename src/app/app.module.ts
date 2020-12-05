@@ -20,19 +20,21 @@ import { HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CoreModule,
     SharedModule,
     QuotesModule,
     AuthModule,//last module has notfound route
+    AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     TranslateModule.forRoot(
