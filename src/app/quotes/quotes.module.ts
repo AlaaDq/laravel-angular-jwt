@@ -7,6 +7,7 @@ import {SharedModule} from '../shared/shared.module';
 import {QuotesRoutingModule} from './quotes-routing.module';
 import {FormsModule} from '@angular/forms';
 
+console.log('QuotesModule loaded');
 @NgModule({
     imports: [
         CommonModule,SharedModule,QuotesRoutingModule,FormsModule

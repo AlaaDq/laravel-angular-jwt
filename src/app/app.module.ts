@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
-import { QuotesModule } from './quotes/quotes.module';
-import { AuthModule } from './auth/auth.module';
+// import { QuotesModule } from './quotes/quotes.module';
+// import { AuthModule } from './auth/auth.module';
 
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -32,8 +32,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     CoreModule,
     SharedModule,
-    QuotesModule,
-    AuthModule,//last module has notfound route
+    // QuotesModule,
+    // AuthModule,//last module has notfound route
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,

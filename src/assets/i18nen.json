@@ -4,12 +4,13 @@
     },
     "nav":{
         "home":"Home",
-        "about":"about",
-        "services":"services",
-        "categories":"categories",
-        "pages":"pages",
-        "blogs":"blogs",
-        "contacts":"contacts"
+        "about":"About",
+        "services":"Services",
+        "categories":"Categories",
+        "pages":"Pages",
+        "blogs":"Blogs",
+        "contacts":"Contacts",
+        "signin":"SignIN"
     },
     "header":{
         "fp-title":"Free Home",
