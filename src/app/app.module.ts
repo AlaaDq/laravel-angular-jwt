@@ -11,8 +11,7 @@ import { SharedModule } from './shared/shared.module';
 // import { QuotesModule } from './quotes/quotes.module';
 // import { AuthModule } from './auth/auth.module';
 
-import {FormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -30,13 +29,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
-    SharedModule,
+    CoreModule,   // Singleton objects (services, components that are loaded only once, etc.)
+    SharedModule,  // Shared (multi-instance) objects
     // QuotesModule,
     // AuthModule,//last module has notfound route
     AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
+
     TranslateModule.forRoot(
         {
             loader:

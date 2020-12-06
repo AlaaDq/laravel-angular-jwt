@@ -4,6 +4,9 @@ import {DataService} from './data.service';
 import {AuthService} from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
+console.log('CoreModule loaded');
+
 @NgModule({
   declarations: [],
   imports: [

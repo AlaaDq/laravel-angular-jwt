@@ -5,14 +5,12 @@ import { QuotesComponent } from './quotes.component';
 import { QuoteComponent } from './quote/quote.component';
 import {SharedModule} from '../shared/shared.module';
 import {QuotesRoutingModule} from './quotes-routing.module';
-import {FormsModule} from '@angular/forms';
 
 console.log('QuotesModule loaded');
 @NgModule({
     imports: [
-        CommonModule,SharedModule,QuotesRoutingModule,FormsModule
+        CommonModule,SharedModule,QuotesRoutingModule,
     ],
     declarations: [QuotesComponent, CreateQuoteComponent,QuoteComponent],
-  exports:[FormsModule]
 })
 export class QuotesModule { }

@@ -9,7 +9,8 @@ import { AuthService } from '../core/auth.service';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent  {
+
+export class HomeComponent implements OnInit  {
     supportedLangs=['en','fr','ar'];
     authState$:BehaviorSubject<boolean>;
 
@@ -23,6 +24,10 @@ export class HomeComponent  {
       //   const browserLang=this.translateService.getBrowserLang();
       //   this.translateService.use(browserLang);
     }
+
+    ngOnInit(): void {
+    }
+  
 
     changeLang(lang:string){
       this.translateService.setDefaultLang(lang);

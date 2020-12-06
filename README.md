@@ -1,27 +1,36 @@
-# Ngfronted
+# Food-Delivery-Angular-10
+# url: https://angular-10.herokuapp.com/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
-## Development server
+# multi lang (ar,en,fr)
+![image](https://user-images.githubusercontent.com/45366622/101280198-70cadb80-37d0-11eb-9572-9f1645b67067.png)
+![image](https://user-images.githubusercontent.com/45366622/101280939-c99c7300-37d4-11eb-9826-6cf950df3f20.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# simple crud operations with laravel api 
+![image](https://user-images.githubusercontent.com/45366622/101280240-b25b8680-37d0-11eb-999a-a63509bcb891.png)
+![image](https://user-images.githubusercontent.com/45366622/101280257-c7381a00-37d0-11eb-9baa-afb71c9299a4.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# notifiy service using angular matrial 
+![image](https://user-images.githubusercontent.com/45366622/101281021-6e1eb500-37d5-11eb-804b-1f49ca07888a.png)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# token based authentication Rfc 7519 using json web token (jwt) 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+![image](https://user-images.githubusercontent.com/45366622/101280274-e636ac00-37d0-11eb-94c4-4c06733ba2eb.png)
+![image](https://user-images.githubusercontent.com/45366622/101280287-ff3f5d00-37d0-11eb-810c-75e0bac4f35f.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# routes guards (before routes leave confirm any un saved edit will be losed && check logged in user)
+![image](https://user-images.githubusercontent.com/45366622/101280844-2186aa00-37d4-11eb-9d87-0d59488da0e2.png)
+
+# Reactive driven forms and template driven forms
+# lazy loading modules
+# custome validation rules 
+
+# home page full screen 
+![FireShot Capture 216 - Ngfronted - angular-10 herokuapp com](https://user-images.githubusercontent.com/45366622/101280337-3e6dae00-37d1-11eb-80c5-18d430a4511b.png)
+
