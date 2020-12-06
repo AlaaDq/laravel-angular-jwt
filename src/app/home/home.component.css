@@ -49,15 +49,16 @@
  
  .logo{
     flex-basis: 422px;
-    background: url('../../assets/header/Group\ 18.jpg') no-repeat;
+    background: url('https://food-delivery-ng-app.herokuapp.com/assets/header/Group\ 18.jpg') no-repeat;
     background-size: 150px 70px;
  }
  
+
  header nav ul{
      list-style: none;
-     display: flex;
-     
+     display: flex;   
  }
+
  header nav ul li {
      padding: 21px 15px;
  }
