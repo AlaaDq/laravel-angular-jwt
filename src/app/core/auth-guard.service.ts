@@ -10,7 +10,7 @@ export class AuthGuardService implements CanActivate {
   constructor(private authService:AuthService,private router:Router) { }
   canActivate(route:ActivatedRouteSnapshot,state:RouterStateSnapshot):Observable<boolean> |Promise<boolean>|boolean
   {
-      return this.authService.isAuth()==true ? true : this.router.navigate(['signin']);
+      return this.authService.isAuth()==true ? true : this.router.navigate(['/auth/signin']);
       
      
   }

@@ -48,7 +48,7 @@ export class SigninComponent implements OnInit {
           tokenData => 
         {console.log(tokenData),
         localStorage.setItem('token',JSON.stringify(tokenData))
-        this.return='quotes'
+        this.return='/quotes/index'
         this.router.navigateByUrl(this.return);
         },
         error => console.log(error)

@@ -17,8 +17,13 @@
           <li>
             <a  href="#">{{'nav.categories' | translate}}</a>
           </li>
-          <li>
-            <a  routerLink="/auth/signin">{{'nav.signin' | translate}}</a>
+          <li *ngIf="!authState$.value">
+            <a 
+            routerLink="/auth/signin">{{'nav.signin' | translate}}</a>
+          </li>
+          <li *ngIf="authState$.value">
+            <a 
+             (click)="signOut()">{{'nav.signout' | translate}}</a>
           </li>
           <li>
             <a  routerLink="/quotes/index">{{'nav.blogs' | translate}}</a>

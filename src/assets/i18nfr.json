@@ -10,7 +10,9 @@
         "pages":"pages",
         "blogs":"blogs",
         "contacts":"contacts",
-        "signin":"SignIN"
+        "signin":"SignIN",
+        "signout":"SignOut"
+
 
     },
     "header":{

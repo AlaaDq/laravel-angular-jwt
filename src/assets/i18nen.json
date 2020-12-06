@@ -10,7 +10,8 @@
         "pages":"Pages",
         "blogs":"Blogs",
         "contacts":"Contacts",
-        "signin":"SignIN"
+        "signin":"SignIN",
+        "signout":"SignOut"
     },
     "header":{
         "fp-title":"Free Home",

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { AuthService } from '../core/auth.service';
 
 @Component({
@@ -11,12 +11,12 @@ import { AuthService } from '../core/auth.service';
 
 export class HomeComponent  {
     supportedLangs=['en','fr','ar'];
-    authState$: Observable<boolean>;
+    authState$:BehaviorSubject<boolean>;
 
     constructor(private translateService:TranslateService  ,private authService:AuthService  )
     {
-
         this.authState$ =this.authService.authStatus$;
+        console.log(this.authState$);
         this.translateService.addLangs(this.supportedLangs);
         this.translateService.setDefaultLang('en');
   
@@ -28,6 +28,9 @@ export class HomeComponent  {
       this.translateService.setDefaultLang(lang);
     }
 
+    signOut(){
+        this.authService.signOut();
+    }
 
 
 }

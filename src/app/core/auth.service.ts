@@ -13,10 +13,11 @@ export interface IAuthService {
     readonly authStatus$: BehaviorSubject<boolean>
     signup(username: string, email: string, password: string,password_confirmation:string) 
     signin(email: string, password: string):Observable<IAuth> 
-    updateAuthStatus(state: boolean): void
+    // updateAuthStatus(state: boolean): void
+    getToken()
+
   }
 
-  export const defaultAuthState: boolean = false;
 
 
 @Injectable({
@@ -28,7 +29,7 @@ export interface IAuthService {
 
 export class AuthService {
     baseUrl: string = 'http://localhost:8000/api/';
-    readonly authStatus$ = new BehaviorSubject<boolean>(defaultAuthState);
+    readonly authStatus$ = new BehaviorSubject<boolean>(this.isAuth());
 
     constructor(private http: HttpClient) { }
 
@@ -64,6 +65,11 @@ export class AuthService {
     
   }
 
+  signOut(){
+      localStorage.removeItem('token');
+      this.updateAuthStatus(false);
+  }
+
  
   getToken() {
     const s= localStorage.getItem('token');
@@ -72,7 +78,8 @@ export class AuthService {
   }
 
   isAuth(){
-    return this.getToken()!=null? true:false;
+      return this.getToken()!=null? true:false;
+      // return this.authStatus$.getValue();
   }
 
 }
