@@ -49,7 +49,7 @@
  
  .logo{
     flex-basis: 422px;
-    background-image: url('/assets/header/Group\ 18.jpg');
+    background: url('/assets/header/Group\ 18.jpg');
      background-repeat: no-repeat;
      background-size: 150px 70px;
  }
